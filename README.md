@@ -1,42 +1,41 @@
-# [JSL09] Submission: Personal Dashboard Chrome Extension
+# Technologies Used
+## HTML/CSS/JavaScript: For building the web interface and scripting client-side interactions.
+## OpenWeatherMap API: For fetching real-time weather updates.
+## Cryptocurrency Market API: For retrieving real-time cryptocurrency data.
 
-You will:
-1. Use the provided Starter Code Repository: https://github.com/CodeSpace-Academy/Module_09_StudentNo_Classcode_Group_Name-Surname_JSL09
-2. Code your solution.
-3. Commit changes to your GitHub repository.
-4. Submit the GitHub Repository Link to the LMS [JSL09] Submission Project Tab.
+# Challenges Encountered
+## 1. API Integration and Data Handling
+Currency Formatting: Initially, cryptocurrency data was displayed in USD. We encountered challenges in dynamically changing the currency display according to user preferences.
 
-In this project you will follow along with the Scrimba Promise Rejection capstone to create a Personal Dashboard for your Chrome Browser. Note you are only required to submit the project code. You DO NOT need to submit the deployed Chrome extension. 
+Asynchronous JavaScript: Fetching data from APIs introduced challenges related to asynchronous operations. Ensuring that the UI updates occurred only after the data was fully received required a better grasp of promises and async/await patterns.
 
-Scrimba Reference Link: https://scrimba.com/learn/frontend/promise-rejection-coc4a4e4d8d208ab33b190dd5
+## 2. Geolocation-Based Weather Data
+User Permission: Implementing geolocation required handling user permissions effectively. Users are prompted to allow location access, and failure to do so needed to be handled gracefully.
 
-![](<[JSL09 Solution].png>)
-Note that this background image is dynamically generated so your's will look different.
+Units Conversion: The initial setup fetched weather data in imperial units (Fahrenheit). Learning to adjust the API request to return metric units (Celsius) was necessary for broader user accessibility.
 
-## What You Need to Do:
+## 3. UI Responsiveness and Data Refresh
+Responsive Design: Making the app responsive to different devices was challenging but critical for user engagement.
 
-1. Clone the provided Starter Code Repository to your local development environment (e.g., VSCode): https://github.com/CodeSpace-Academy/Module_09_StudentNo_Classcode_Group_Name-Surname_JSL09
-2. Open the cloned project in your code editor.
-3. Code your solution for the challenge as per the provided instructions.
-4. If you have coded your Personal Dashboard challenge in Scrimba, you will need to download the zip folder of your project files. Unzip the project files into your JSL09 project repo on GitHub. Make sure to NOT use the Scrimba README. Instead you will keep your starter code README.
-5. Commit your changes to your local Git repository with meaningful commit messages.
-6. Push your local Git repository to your GitHub account.
-7. Verify that the changes have been successfully pushed to your GitHub repository.
+Data Refresh: Implementing efficient and timely refresh of data while avoiding excessive API calls posed a challenge, balancing between up-to-date information and resource optimization.
 
-![alt text](download-scrimba-files.png)
-You can download your Scrimba files in the bottom right hand corner of the Scrimba IDE panel. 
+# Learning Outcomes
+## API Manipulation and Integration
+Learned how to read and utilize documentation for two different APIs to fetch and display data as per user requirements.
 
-## What You Need to Include:
+Gained experience in handling JSON data structures and dynamically updating the DOM based on API responses.
 
-1. Ensure that your code includes the necessary modifications to meet the challenge requirements.
-2. Your GitHub repository should contain the updated code files.
+## Asynchronous Programming
+Enhanced understanding of asynchronous JavaScript, promises, and async/await syntax to manage data fetching processes seamlessly.
 
-## How We'll Assess Your Work:
+## UI/UX Design
+Improved skills in HTML/CSS for creating an intuitive and responsive user interface.
 
-1. We will review your GitHub repository to ensure that it contains the updated code files.
-2. We will assess the modifications made to the code to verify that they effectively meet the challenge requirements.
-3. We will consider the commit history and meaningful commit messages to evaluate your coding process.
+Learned to handle user interactions and permissions more effectively, particularly concerning geolocation.
 
+## Problem Solving
+Developed troubleshooting skills, particularly in debugging API data retrieval and handling edge cases in data display (e.g., handling null or unexpected data types).
 
+## Conclusion
 
-
+This project was a valuable learning experience where we applied web development skills to real-world challenges. Each obstacle we faced helped us grow, adapt, and improve, expanding our abilities and reinforcing the importance of continuous learning in web development. We embraced the dynamic nature of this field, pushing our boundaries to achieve meaningful results.
