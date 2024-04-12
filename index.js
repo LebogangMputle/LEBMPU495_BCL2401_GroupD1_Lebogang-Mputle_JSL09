@@ -1,5 +1,5 @@
 // Fetch a random landscape image from Unsplash API for the background
-fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=skateboards")
+fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=,skateboarding")
 .then(res => res.json())
 .then(data => {
      // Set the fetched image as the background of the document body
@@ -33,6 +33,7 @@ fetch("https://api.coingecko.com/api/v3/coins/catecoin")
     <p>🎯 Current Price: R${data.market_data.current_price.zar}</p>
     <p>📈 High 24h: R${data.market_data.high_24h.zar}</p>
     <p>📉 Low 24h: R${data.market_data.low_24h.zar}</p>
+    <p>Onwer: Lebogang Mputle</p>
 `;
 })
 .catch(err => console.error(err));  // Log any errors that occur during cryptocurrency data fetch 
