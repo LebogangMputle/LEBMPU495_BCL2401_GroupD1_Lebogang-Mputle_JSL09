@@ -36,6 +36,6 @@ Learned to handle user interactions and permissions more effectively, particular
 ## Problem Solving
 Developed troubleshooting skills, particularly in debugging API data retrieval and handling edge cases in data display (e.g., handling null or unexpected data types).
 
-## Conclusion
+# Conclusion
 
 This project was a valuable learning experience where we applied web development skills to real-world challenges. Each obstacle we faced helped us grow, adapt, and improve, expanding our abilities and reinforcing the importance of continuous learning in web development. We embraced the dynamic nature of this field, pushing our boundaries to achieve meaningful results.
