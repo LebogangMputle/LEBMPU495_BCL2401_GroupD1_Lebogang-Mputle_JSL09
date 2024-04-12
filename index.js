@@ -1,5 +1,5 @@
 // Fetch a random landscape image from Unsplash API for the background
-fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=sky")
+fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=skateboards")
 .then(res => res.json())
 .then(data => {
      // Set the fetched image as the background of the document body
@@ -28,12 +28,12 @@ fetch("https://api.coingecko.com/api/v3/coins/catecoin")
         <img src=${data.image.small} />
         <span>${data.name}</span>
     `
-    // Display additional cryptocurrency market data
+    // Display additional cryptocurrency market data and changed the Currencies from dollars to Rands
     document.getElementById("crypto").innerHTML += `
-        <p>🎯: $${data.market_data.current_price.usd}</p>
-        <p>📈: $${data.market_data.high_24h.usd}</p>
-        <p>📉: $${data.market_data.low_24h.usd}</p>
-    `
+    <p>🎯 Current Price: R${data.market_data.current_price.zar}</p>
+    <p>📈 High 24h: R${data.market_data.high_24h.zar}</p>
+    <p>📉 Low 24h: R${data.market_data.low_24h.zar}</p>
+`;
 })
 .catch(err => console.error(err));  // Log any errors that occur during cryptocurrency data fetch 
 
@@ -43,11 +43,11 @@ function getCurrentTime() {
     document.getElementById("time").textContent = date.toLocaleTimeString("en-us", {timeStyle: "short"})
 }
 
-setInterval(getCurrentTime, 1000) // Call getCurrentTime() function every second using setInterval
+setInterval(getCurrentTime, 1000); // Call getCurrentTime() function every second using setInterval
 
-// Fetch weather data based on user's geolocation from OpenWeatherMap API
+// Fetch weather data based on user's location from OpenWeatherMap API
 navigator.geolocation.getCurrentPosition(position => {
-fetch(`https://apis.scrimba.com/openweathermap/data/2.5/earth?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial`)
+fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`) //changed the SI units from imperial to metric.
     .then(res => {
         if (!res.ok) {
             throw Error("Weather data not available")
@@ -56,7 +56,7 @@ fetch(`https://apis.scrimba.com/openweathermap/data/2.5/earth?lat=${position.coo
     })
     .then(data => {
         // Display weather icon, temperature, and city name
-        const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+        const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
         document.getElementById("weather").innerHTML = `
             <img src=${iconUrl} />
             <p class="weather-temp">${Math.round(data.main.temp)}º</p>
